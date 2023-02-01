@@ -7,4 +7,12 @@ class ArticlesController < ApplicationController
     @articles = Article.all #the @ sign makes variable Public (instance is rails name)
   end
 
+  def new
+
+  end
+
+  def create
+    render plain: params[:article]
+  end
+  
 end
