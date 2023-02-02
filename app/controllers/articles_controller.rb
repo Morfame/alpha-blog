@@ -15,7 +15,6 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
-
   def create
     @article = Article.new(params.require(:article).permit(:title, :description))
     if @article.save
@@ -33,6 +32,7 @@ class ArticlesController < ApplicationController
     else
       render 'edit'
     end
+    
   end
 
 end
